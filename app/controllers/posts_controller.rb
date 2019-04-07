@@ -31,6 +31,11 @@ class PostsController < ApplicationController
     redirect_to post_path(post.id)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to posts_path
+  end
   # メソッドの前にprivateと書くことにより、アクションとしては認識されない（メソッドの名前はモデル名_paramsとすることが多いです）
   private
 
