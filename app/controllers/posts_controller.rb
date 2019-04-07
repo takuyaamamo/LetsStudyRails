@@ -12,6 +12,10 @@ class PostsController < ApplicationController
     # トップ画面へリダイレクト
     redirect_to '/top'
   end
+
+  def index
+    @posts = Post.all
+  end
   # メソッドの前にprivateと書くことにより、アクションとしては認識されない（メソッドの名前はモデル名_paramsとすることが多いです）
   private
 
