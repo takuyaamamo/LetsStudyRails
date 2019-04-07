@@ -60,3 +60,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# ファイルのアップロード先を柔軟に設定できる簡単に組み込める画像のサムネイルを生成できる gem refile
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+
+# 画像加工用のgem
+gem "refile-mini_magick"
