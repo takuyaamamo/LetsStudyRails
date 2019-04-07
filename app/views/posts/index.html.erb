@@ -7,4 +7,6 @@
     <!-- <%= link_to post.title, "/posts/#{post.id}" %>を名前付きルートに変更 -->
     <%= link_to post.title, post_path(post.id)  %>
   </span>
+  <p>画像</p>
+  <%= attachment_image_tag post, :image, :fill, 100, 100, format: 'jpeg' %>
 <% end %>
