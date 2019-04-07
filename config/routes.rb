@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'top' => 'root#top'
   # .../postsというURLにpostでリクエストした時にpostsコントローラーのcreateアクションが呼び出される
   post 'posts' => 'posts#create'
-  
+
   get 'posts' => 'posts#index'
+  # .../posts/1 や .../posts/3 に該当する
+  get 'posts/:id' => 'posts#show', as: 'post'
 end

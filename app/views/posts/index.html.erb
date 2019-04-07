@@ -1,0 +1,10 @@
+<h1>投稿一覧</h1>
+<!-- -tab -->
+<% @posts.each do |post| %>
+  <p>タイトル</p>
+  <span>
+    <!-- =tab -->
+    <!-- <%= link_to post.title, "/posts/#{post.id}" %>を名前付きルートに変更 -->
+    <%= link_to post.title, post_path(post.id)  %>
+  </span>
+<% end %>
